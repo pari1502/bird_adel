@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Flappy Nusantara+</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-wrapper">
+    <h1 class="title">Flappy Nusantara+</h1>
+    <canvas id="gameCanvas" width="420" height="640"></canvas>
+
+    <!-- Main Menu -->
+    <div id="mainMenu" class="menu-overlay">
+      <div class="menu-card">
+        <h2 class="menu-title">Menu Utama</h2>
+        <p class="menu-subtitle">Burung Nusantara siap terbang melewati rintangan!</p>
+        <button id="menuPlayBtn" class="primary-btn">Mulai Game</button>
+
+        <div class="menu-section">
+          <h3>Cara Main</h3>
+          <ul>
+            <li>Tekan <strong>SPACE</strong> atau <strong>tap / klik</strong> untuk lompat</li>
+            <li>Hindari pipa dan tanah</li>
+            <li>Dapatkan skor setinggi mungkin</li>
+          </ul>
+        </div>
+
+        <div class="menu-section small">
+          <p>Tips: tekan <strong>M</strong> untuk mute / unmute suara</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="ui">
+      <div class="top-bar">
+        <div class="score-panel">
+          <span>Score: </span><span id="score">0</span>
+        </div>
+        <button id="soundBtn" class="icon-btn" title="Toggle sound">🔊</button>
+      </div>
+      <button id="startBtn">Start</button>
+      <p class="hint">SPACE / TAP untuk lompat • M untuk mute</p>
+    </div>
+  </div>
+
+  <!-- Simple SFX -->
+  <audio id="sfx-flap" src="sfx_flap.wav" preload="auto"></audio>
+  <audio id="sfx-score" src="sfx_score.wav" preload="auto"></audio>
+  <audio id="sfx-hit" src="sfx_hit.wav" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
